@@ -30,7 +30,7 @@ var validate *validator.Validate
 func main() {
 
     r := gin.Default()
-    r.POST("/logs", func(c *gin.Context) {
+    r.GET("/logs", func(c *gin.Context) {
         auth, err := aws.EnvAuth()
         if err != nil {
             log.Panic(err)
